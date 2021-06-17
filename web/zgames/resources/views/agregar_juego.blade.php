@@ -1,5 +1,5 @@
-@extends("layout.master")
-
+@extends("layouts.master")
 @section("contenido")
-    <h1>Ver Consolas</h1>
+    <!-- Agregar formulario -->
+    <h1>Hola soy agregar juego</h1>
 @endsection

@@ -12,8 +12,12 @@ const cargarMarcas = async()=>{
     });
 
 };
-
-cargarMarcas();
+//Esto ejecuta un codigo asegurandose que el total de la pagina
+//incluidos todos sus recursos esten cargados antes de ejecutar.
+//(Esto mejora la usabilidad el atributo de calidad de la funcion)
+document.addEventListener("DOMContentLoaded", ()=>{
+    cargarMarcas();
+});
 
 document.querySelector("#registrar-btn").addEventListener("click", async ()=>{
     let nombre = document.querySelector("#nombre-txt").value;
@@ -33,5 +37,11 @@ document.querySelector("#registrar-btn").addEventListener("click", async ()=>{
     //3. El modelo ingresa en la base de datos
     //4. Todos felices
     let res = await crearConsola(consola);
-    Swal.fire("Consola Creada", "Consola creada exitosamente", "info");
+    await Swal.fire("Consola Creada", "Consola creada exitosamente", "info");
+    //La linea que viene despues del Swal.fire se va a ejecutar solo cuando la persona presione OK
+
+    //Aqui a redirigir a otra pagina
+    window.location.href = "ver_consolas";
+    //Abrir nueva pestaña
+    //window.open("www.google.cl","_blank");
 });

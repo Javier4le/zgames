@@ -18,3 +18,8 @@
         </div>
     </div>
 @endsection
+<!-- Esto define el contenido de la seccion javascript del master -->
+@section("javascript")
+    <script src="{{asset('js/servicios/consolasService.js')}}"></script>
+    <script src="{{asset('js/ver_consolas.js')}}"></script>
+@endsection

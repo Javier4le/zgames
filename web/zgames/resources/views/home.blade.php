@@ -1,7 +1,7 @@
 @extends("layouts.master")
 
 @section("contenido")
-    
+
     <div class="row mt-5">
         <div class="col-12 col-md-6 col-lg-5 mx-auto">
             <div class="card">
@@ -24,7 +24,7 @@
                     </div>
                 </div>
                 <div class="card-footer d-grid gap-1">
-                    <button class="btn btn-info">Registrar</button>
+                    <button id="registrar-btn" class="btn btn-info">Registrar</button>
                 </div>
             </div>
         </div>
@@ -33,5 +33,6 @@
 @endsection
 <!-- Esto define el contenido de la seccion javascript del master -->
 @section("javascript")
+    <script src="{{asset('js/servicios/consolasService.js')}}"></script>
     <script src="{{asset('js/home.js')}}"></script>
 @endsection

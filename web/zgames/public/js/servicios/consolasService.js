@@ -15,3 +15,17 @@ const crearConsola = async(consola)=>{ //arrow functions
         }
     });
 };
+
+//eliminarConsola
+const eliminarConsola = async(id)=>{
+    try{
+        let resp = await axios.post("api/consolas/delete", {id}, {
+            headers:{
+                "Content-Type": "application/json"
+            }
+        });
+        return resp.data == "ok";
+    }catch(e){
+        return false;
+    }
+}

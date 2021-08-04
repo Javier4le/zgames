@@ -11,7 +11,7 @@ const cargarMarcas = async ()=>{
     });
 };
 
-const iniciarEliminacion = async function(){
+const iniciarEliminacion = async function(){ // Aquí no funciona arrow function debido a this.idEliminar
     //1. Obtener el id a eliminar
     let id = this.idConsola;
     let resp = await Swal.fire({title:"Esta seguro?", text:"Esta operacion es irreversible", icon:"error", showCancelButton:true});

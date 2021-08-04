@@ -8,7 +8,9 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
-    <title>Hello, world!</title>
+    {{-- <link rel="shortcut icon" href="https://cdn.sstatic.net/Sites/es/img/favicon.ico?v=a8def514be8a"> --}}
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Z-Games</title>
   </head>
   <body>
     <header>
@@ -26,7 +28,6 @@
                   <a class="nav-link" href="{{route('ver_consolas')}}">Ver Consolas</a>
                   <a class="nav-link" href="{{route('ver_juegos')}}">Ver Juegos</a>
                   <a class="nav-link" href="{{route('agregar_juego')}}">Agregar Juegos</a>
-
                 </div>
               </div>
             </div>
